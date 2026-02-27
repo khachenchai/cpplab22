@@ -86,7 +86,6 @@ ComplexNumber operator*(double val, const ComplexNumber& c) {
 }
 
 ComplexNumber operator/(double val, const ComplexNumber& c) {
-    // To do 1/c, we treat 'val' as a complex number (val + 0i)
     return ComplexNumber(val, 0) / c; 
 }
 
@@ -94,7 +93,6 @@ bool operator==(double val, const ComplexNumber& c) {
     return (val == c.real && c.imag == 0);
 }
 
-///////////////////////////////////////
 
 double ComplexNumber::abs() {
 	return (double)sqrt(pow(real, 2) + pow(imag, 2));
